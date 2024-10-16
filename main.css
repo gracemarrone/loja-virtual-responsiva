@@ -1,0 +1,146 @@
+/*Excutar o reset para ter um maior controle das propriedades que já vem por padrão no navegador */
+*{ /* *Seletor que seleciona todos os elementos e aplica as propriedades definidas a todos eles*/
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* box-sizing: border-box; - como se estivesse definindo uma caixa que irá conter todo o conteúdo dentro dela, isso é definido através do valor border-box que não deixa ele ultrapassar essa contenção */
+}
+
+header, footer{
+    width:100%;
+    background-color: #191970;
+    color: #fff;
+    padding: 2% 10%;
+}
+
+main{
+    width: 90%;    
+    margin: auto;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5%;
+}
+
+header h1, h2{
+    text-transform: uppercase;
+    font-style: italic;
+}
+
+header a{
+    text-decoration: none;
+    color: #fff;
+}
+
+ul{
+    display: flex;
+    gap: 24px;
+    list-style-type: none;
+}
+
+h2, h3{
+    color:#191970;
+}
+
+h2{
+    border-bottom: #191970 2px solid;
+    padding-bottom: 4px;
+    margin-bottom: 24px;
+}
+
+h3, p{
+    margin-bottom: 8px;
+}
+
+#sobre-loja{
+    display: flex;
+    margin-bottom: 5%;
+}
+
+#sobre-loja img{
+    width: 50%;
+    margin-right: 5%;
+}
+
+#sobre-loja div{
+    width: 40vw;
+}
+
+p{
+    font-size: 14px;
+    text-align: justify;
+}
+
+.container-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+#produtos img{
+    width: 80%;
+    border-radius: 10px;
+    border: #191970 2px solid;
+    box-shadow: 5px 5px 10px #0b0b1f;
+}
+
+.descricao-produto h3{
+    margin-top: 16px;
+}
+
+#produtos .descricao-produto{
+    width: 100%;
+    padding: 5%;
+    text-align: center;
+    margin-bottom: 24px;
+}
+
+button{
+    background-color:#191970;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100%;
+}
+
+footer p{ 
+    text-align: center;
+}
+
+/*SMARTPHONE*/
+@media screen and (max-width:640px){
+    #sobre-loja{
+        display: block;
+    }
+    
+    #sobre-loja img, #sobre-loja div{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .container-grid{
+        display: flex;
+        flex-direction: column;
+    }
+    
+}
+
+/*TABLET*/
+@media screen and (min-width:641px) and (max-width:1023px){
+    #sobre-loja{
+        display: block;
+    }
+    
+    #sobre-loja img, #sobre-loja div{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    .container-grid{
+    grid-template-columns: repeat(2, 1fr);
+}
+
+}
